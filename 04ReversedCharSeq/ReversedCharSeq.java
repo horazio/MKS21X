@@ -1,20 +1,33 @@
 public class ReversedCharSeq implements CharSequence{
     String data;
     public ReversedCharSeq(String seq){
-	data = seq;
+	data = reverse(seq);
     }
 
     public static String reverse(String word){
         String reversed = "";
-	for(int i = 0; int < data.length(); int++){
-	    reversed = data.charAt(int);
-	    
-	}
-
+        for(int i = 0; i < word.length(); i++){
+            reversed = word.charAt(i) + reversed;
+        }
+        return reversed;
     }
 
+    public char charAt(int index){
+        return data.charAt(index);
+    }
 
-
-
-
+    public int length(){        
+        return data.length();
+    }
+    
+    public ReversedCharSeq subSequence(int start, int end){
+        String ans = reverse(data);
+        ans.substring(start, end);
+        ReversedCharSeq a = new ReversedCharSeq(ans);
+        return a;
+    }
+    
+    public String toString(){
+        return data;
+    }
 }
