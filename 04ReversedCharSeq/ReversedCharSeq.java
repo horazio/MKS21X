@@ -21,9 +21,8 @@ public class ReversedCharSeq implements CharSequence{
     }
     
     public ReversedCharSeq subSequence(int start, int end){
-        String ans = reverse(data);
-        ans.substring(start, end);
-        ReversedCharSeq a = new ReversedCharSeq(ans);
+        ans = data.substring(start, end);
+        ReversedCharSeq a = new ReversedCharSeq(reverse(ans));
         return a;
     }
     
