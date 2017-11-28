@@ -24,7 +24,11 @@ public class CirculatingBook extends LibraryBook{
     }
 
     public String toString(){
-	return super.toString() + " , " + currentHolder + " , " + dueDate;
+	if (currentHolder == null){
+	    return super.toString();
+	}else{
+	    return super.toString() + " , " + currentHolder + " , " + dueDate;
+	}
     }
 
 }
