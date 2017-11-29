@@ -1,4 +1,4 @@
-abstract Class Book{
+ abstract class Book{
     String author;
     String title;
     String ISBN;
@@ -18,31 +18,18 @@ abstract Class Book{
     public String getISBN(){
 	return ISBN;
     }
-    public setAuthor(String au){
+    
+    public void setString(String au){
 	author = au;
     }
-    public setTitle(String ti){
+    public void setTitle(String ti){
 	title = ti;
     }
-    public setISBN(String is){
+    public void setISBN(String is){
 	ISBN = is;
     }
     public String toString(){
 	return author + " , " + title + " , " + ISBN;
     }
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
