@@ -29,4 +29,5 @@ public class ReversedCharSeq implements CharSequence{
     public String toString(){
         return data;
     }
+    
 }
