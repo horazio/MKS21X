@@ -47,7 +47,7 @@ public class Barcode implements Comparable<Barcode>{
     }
     
     public int compareTo(Barcode other){
-        return zip.compareTo(other.getZip());
+        return Integer.parseInt(this.getZip()) - Integer.parseInt(other.getZip());
     }
     
     public boolean equals(Barcode other){
@@ -60,7 +60,10 @@ public class Barcode implements Comparable<Barcode>{
     
     public static void main(String[] args){
         Barcode a = new Barcode("92010");
+        Barcode b = new Barcode("92010");
         System.out.println(getChar(9));
+        System.out.println(a.compareTo(b));
         System.out.println(a);
+        System.out.println(a.equals(b));
     }
 }
