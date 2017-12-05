@@ -2,6 +2,11 @@ import java.util.*;
 public class Barcode implements Comparable<Barcode>{
     String zip;
     public Barcode(String zipCode){
+        if(zipCode.length() != 5){
+            throw new IllegalArgumentException();
+        }
+        
+        int foo = Integer.parseInt(zipCode);
         zip = zipCode;
     }
     public String getZip(){
