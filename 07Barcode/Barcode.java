@@ -30,7 +30,7 @@ public class Barcode implements Comparable<Barcode>{
                           };
         return chars[dig];
     }
-    private int getCSum(){
+    private static int getCSum(String zip){
         int sum = 0;
         for(int i = 0; i < 5; i++){
             sum += zip.charAt(i) - 48;
@@ -38,13 +38,27 @@ public class Barcode implements Comparable<Barcode>{
         return sum % 10;
     }
     public String getCode(){
+        return toCode(zip);
+    }
+    public static String toCode(String zip){
+        if(zip.length() != 5){
+            throw new IllegalArgumentException();
+        }
+        
+        try {
+            int foo = Integer.parseInt(zip);
+        }catch(NumberFormatException e){
+            throw new IllegalArgumentException();
+        }
+        
         String code = "|";
         for(int i = 0; i < 5; i++){
             System.out.println(code);
             code += getChar(zip.charAt(i) - 48); 
         }
-        return code + getChar(this.getCSum()) + '|';
+        return code + getChar(getCSum(zip)) + '|';
     }
+    
     
     public int compareTo(Barcode other){
         return Integer.parseInt(this.getZip()) - Integer.parseInt(other.getZip());
