@@ -59,7 +59,12 @@ public class Barcode implements Comparable<Barcode>{
         return code + getChar(getCSum(zip)) + '|';
     }
     
-    
+    //public static toZip(String code){
+    //   if (code.length() != 32 ||
+    //        code.charAt(0) != '|' ||
+    //      code.charAt(31) != '|' ||
+    //      )
+    //}
     public int compareTo(Barcode other){
         return Integer.parseInt(this.getZip()) - Integer.parseInt(other.getZip());
     }
