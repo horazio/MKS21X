@@ -15,13 +15,25 @@ public class Sorts{
           for(int i = j; i < data.length; i++){
               if(data[i] < data[holder]){
                   holder = i;
-                  //System.out.println(holder + " -----" + data[holder] + "----" + i);
               }
           }
           swap(data, j, holder);
       }  
   }
-  
+    
+    public static void insertionSort(int[] data){
+	for(int j = 1; j < data.length; j++){
+	    int i = j;
+	    while(i != 0 && data[i - 1] > data[i]){
+		swap(data, i - 1, i);
+		i--;
+	    }
+		    
+	    }
+	    
+	    
+	}
+	
   private static void swap(int[] ary, int a, int b){
       int holder = ary[a];
       ary[a] = ary[b];
@@ -32,7 +44,7 @@ public class Sorts{
         
         
         
-    int[] a = {6356354, 23545, 1234, 23432, 1251};
+	int[] a = {1, 2,1234, 5 ,1235, 4, 1346, 13, 665, 13656,23, 4, 4,4, 4, 4,4 , 3, 4, 5, 123, 1234, 8, 9, 0};
 
 
 
