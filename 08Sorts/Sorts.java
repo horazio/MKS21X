@@ -29,10 +29,32 @@ public class Sorts{
   }
 
     public static void main(String[] args){
-        int[] a = {9, 8, 7, 6, -5, 4, 3, 2, -1};
-        selectionSort(a);
-        for(int i = 0; i < a.length; i++){
-            System.out.println(a[i]);
-        }
+        
+        
+        
+    int[] a = {6356354, 23545, 1234, 23432, 1251};
+
+
+
+    String input = "[";
+    for (int i=0;i<a.length;i++){
+      input += a[i];
+      if (i!=a.length-1){
+        input += ",";
+      }
     }
+    input += "]";
+    System.out.println(input);
+    Sorts.selectionSort(a);
+    System.out.println("-----Sorted Below----");
+    String output = "[";
+    for (int i=0;i<a.length;i++){
+      output += a[i];
+      if (i!=a.length-1){
+        output += ",";
+      }
+    }
+    output += "]";
+    System.out.println(output);
+  }
 }
