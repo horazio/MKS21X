@@ -1,7 +1,7 @@
 public class Sorts{
 
   public static String name(){
-      return "01.Fusco.Horace"; 
+      return "10.Fusco.Horace"; 
   }
 
   /**Selection sort of an int array. 
