@@ -11,9 +11,11 @@ public class Sorts{
   public static void selectionSort(int[] data){
       int holder = 0;
       for(int j = 0; j < data.length;  j++){
+          holder = j;
           for(int i = j; i < data.length; i++){
-              if(data[i] < holder){
+              if(data[i] < data[holder]){
                   holder = i;
+                  //System.out.println(holder + " -----" + data[holder] + "----" + i);
               }
           }
           swap(data, j, holder);
@@ -26,4 +28,11 @@ public class Sorts{
       ary[b] = holder;
   }
 
+    public static void main(String[] args){
+        int[] a = {9, 8, 7, 6, -5, 4, 3, 2, -1};
+        selectionSort(a);
+        for(int i = 0; i < a.length; i++){
+            System.out.println(a[i]);
+        }
+    }
 }
