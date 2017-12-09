@@ -28,6 +28,18 @@ public class Sorts{
       ary[b] = holder;
   }
 
+  
+    public static void bubbleSort(int[] ary){
+        for(int i = ary.length; i > 0; i--){
+            for(int j = 0; j < i - 1; j ++){
+                if(ary[j] > ary[j + 1]){
+                    swap(ary, j, j + 1);
+                }
+            }
+        }
+    }
+  
+  
     public static void main(String[] args){
         
         
@@ -45,7 +57,7 @@ public class Sorts{
     }
     input += "]";
     System.out.println(input);
-    Sorts.selectionSort(a);
+    Sorts.bubbleSort(a);
     System.out.println("-----Sorted Below----");
     String output = "[";
     for (int i=0;i<a.length;i++){
