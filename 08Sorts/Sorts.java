@@ -1,7 +1,7 @@
+import java.util.*;
 public class Sorts{
-
   public static String name(){
-      return "10.Fusco.Horace"; 
+      return "10,Fusco,Horace"; 
   }
 
   /**Selection sort of an int array. 
@@ -81,15 +81,16 @@ public class Sorts{
 
     //Sorts Tests Here:
 
-    //System.out.println("selectionSort:");
-    //selectionSort(randish);
+    System.out.println("selectionSort:");
+    selectionSort(randish);
 
     //System.out.println("insertionSort:");
     //insertionSort(randish);
 
-    System.out.println("bubbleSort:");
-    bubbleSort(randish);
+    //System.out.println("bubbleSort:");
+    //bubbleSort(randish);
 
+    System.out.println(Sorts.name());
     System.out.println(Arrays.toString(randish));
 
     System.out.println("Runtime: " +
