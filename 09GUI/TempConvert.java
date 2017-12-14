@@ -37,7 +37,7 @@ public class TempConvert extends JFrame implements ActionListener {
             t.setText("" + FtoC(Double.parseDouble(t.getText())));
         }
         if(s.equals("convert to farenheit")){
-            t.setText( "" + FtoC(Double.parseDouble(t.getText())));
+            t.setText( "" + CtoF(Double.parseDouble(t.getText())));
         }
     }
 
