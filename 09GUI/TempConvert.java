@@ -16,7 +16,7 @@ public class TempConvert extends JFrame implements ActionListener {
         box = this.getContentPane();
         box.setLayout(new FlowLayout());
 
-        b1 = new JButton("Convert to celsius");
+        b1 = new JButton("convert to celsius");
         b2 = new JButton("convert to farenheit");
         t = new JTextField(10);
 
@@ -33,6 +33,12 @@ public class TempConvert extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e){
         String s = e.getActionCommand();
         System.out.println(s);
+        if(s.equals("convert to celsius")){
+            t.setText("" + FtoC(Double.parseDouble(t.getText())));
+        }
+        if(s.equals("convert to farenheit")){
+            t.setText( "" + FtoC(Double.parseDouble(t.getText())));
+        }
     }
 
 
