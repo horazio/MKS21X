@@ -36,6 +36,15 @@ public class TempConvert extends JFrame implements ActionListener {
     }
 
 
+    public static double FtoC(double t){
+        return t * 1.8 + 32;
+    }
+    
+    public static double CtoF(double t){
+        return (t - 32) * (5.0 / 9);
+    }
+    
+    
     public static void main(String[] args){
         TempConvert t = new TempConvert();
         t.setVisible(true);
