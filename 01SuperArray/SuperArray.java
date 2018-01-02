@@ -52,7 +52,7 @@ public class SuperArray{
 
     public String get(int index){
         if (index < 0 || index >= size){
-            System.out.println("No! Index out of Range");
+	    // System.out.println("No! Index out of Range");
             return null;
         }
         return data[index];
@@ -65,7 +65,7 @@ public class SuperArray{
             return holder;
         }
         else{
-            System.out.println("No! Index out of Range");
+	    // System.out.println("No! Index out of Range");
             return null;
         }
     }
@@ -101,7 +101,7 @@ public class SuperArray{
 
     public void add(int index, String element){
         if ( index < 0 || index > size){
-            System.out.println("No! Index out of Range");
+	    // System.out.println("No! Index out of Range");
         }
         else{ 
             this.resize();
@@ -115,7 +115,7 @@ public class SuperArray{
     
     public String remove(int index){
         if(size == 0 || index < 0 || index >= size){
-            System.out.println("No! Index out of Range or length of array 0");
+	    // System.out.println("No! Index out of Range or length of array 0");
             return null;
         }
         this.resize();

@@ -1,9 +1,9 @@
-public class ReversedCharSeq implements CharSequence{
+public class ReversedCharSequence implements CharSequence{
     String data;
-    public ReversedCharSeq(String seq){
+    public ReversedCharSequence(String seq){
         data = reverse(seq);
     }
-    public ReversedCharSeq(ReversedCharSeq a){
+    public ReversedCharSequence(ReversedCharSeq a){
         data = reverse(a.toString());
     }
     public static String reverse(String word){
@@ -32,17 +32,6 @@ public class ReversedCharSeq implements CharSequence{
         return data;
     }
     public static void main(String[] args){
-        ReversedCharSeq a = new ReversedCharSeq("Hello");
-        ReversedCharSeq b = new ReversedCharSeq(a);
-    
-        System.out.println(a);//olleH
-        System.out.println(b);//Hello
-        System.out.println(a.charAt(3));//e
-        System.out.println(a.length());//5
-        System.out.println(a.toString());//olleH
-        System.out.println(a.subSequence(2,4));//le
-        System.out.println(a.subSequence(0,3));//oll
-        System.out.println(a);//olleH
-       
+        
     }
 }
